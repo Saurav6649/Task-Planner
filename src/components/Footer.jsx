@@ -14,10 +14,10 @@ const Footer = () => {
   return (
     <footer className="w-full bg-linear-165 from-black to-rose-900 h-[60px] flex items-center">
       <div className="flex items-center justify-between px-6 text-white w-full">
-        <p className="underline text-white/80 hover:text-white cursor-pointer font-medium">
+        <p className="underline text-white/80 lg:block hidden hover:text-white cursor-pointer font-medium">
           www.SpeeWork.co
         </p>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 ">
           <h1 className="font-medium text-white ">Total: {tasks.length}</h1>
           <h1 className="font-medium text-yellow-400 ">
             Pending: {pendingCount}

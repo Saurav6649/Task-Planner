@@ -5,10 +5,10 @@ import React from "react";
 
 const TaskCard = ({ item, deleteTask, updateTask, index }) => {
   return (
-    <Card hoverable key={index}>
+    <Card hoverable key={index} >
       <CardMeta title={item.title} description={item.description} />
       <div className="mt-4 flex mb-3 justify-between items-center">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <Tag className="!capitalize">{item.status}</Tag>
           {item.status === "completed" && (
             <Tag className="!capitalize">{item.priority}</Tag>

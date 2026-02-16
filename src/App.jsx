@@ -29,7 +29,7 @@ const App = () => {
   const completed = filteredTasks.filter((t) => t.status === "completed");
   return (
     <Layout setOpen={setOpen} setSelectedDate={setSelectedDate}>
-      <section className="h-full px-10 py-5 w-[2000px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center  ">
+      <section className="h-full px-10 py-5 lg:w-[2000px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center  ">
          <TaskColumn
               title="Highest"
               tasks={highest}

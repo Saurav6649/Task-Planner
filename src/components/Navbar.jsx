@@ -19,15 +19,15 @@ const Navbar = ({ setOpen, setSelectedDate }) => {
   return (
     <nav className="w-full bg-linear-165 from-rose-900 to-black h-[60px] flex items-center justify-between px-8">
       <div className="flex items-center ">
-        <div>
+        <div className="mr-1">
           <span className="w-2 h-2 text-lg bg-[linear-gradient(335deg,_#ff9a9e,_#fad0c4,_hsl(5.3,_84.9317766673029%,_53.015459374014654%))] text-red-900 px-3 py-2.5 font-bold rounded-full">
             PL
           </span>
         </div>
-        <p className="font-medium text-white text-lg">anner</p>
+        <p className="font-medium lg:block hidden text-white text-lg">anner</p>
       </div>
       <div className="flex items-center gap-3">
-        <h1 className="text-white text-xl font-semibold">{timer}</h1>
+        <h1 className="text-white lg:block hidden text-xl font-semibold">{timer}</h1>
         <DatePicker
           onChange={(date) =>
             setSelectedDate(date ? date.format("YYYY-MM-DD") : null)
@@ -35,7 +35,7 @@ const Navbar = ({ setOpen, setSelectedDate }) => {
         />
         <button
           onClick={() => setOpen(true)}
-          className=" bg-gradient-to-br  !from-rose-600 !to-pink-500 text-white flex items-center text-sm gap-2 font-semibold px-3 py-2 rounded-lg transition-transform duration-300 hover:scale-110"
+          className=" bg-gradient-to-br  !from-rose-600 !to-pink-500 text-white flex items-center text-sm gap-2 font-semibold px-2 lg:px-3 py-2 rounded-lg transition-transform duration-300 hover:scale-110"
         >
           <Plus className="w-4 h-4" />
           Add Task
@@ -44,7 +44,7 @@ const Navbar = ({ setOpen, setSelectedDate }) => {
           title="do you want to delete all tasks"
           onConfirm={() => Deletealltask()}
         >
-          <button className=" bg-red-600 text-white flex items-center text-sm gap-2 font-semibold px-3 py-2 rounded-lg transition-transform duration-300 hover:scale-110">
+          <button className=" bg-red-600 text-white flex items-center text-sm gap-2 font-semibold px-2 lg:px-3 py-2 rounded-lg transition-transform duration-300 hover:scale-110">
             <Delete className="w-4 h-4" />
             Delete Task
           </button>
